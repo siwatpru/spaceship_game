@@ -1,0 +1,15 @@
+[package]
+name = "spaceship_game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = "0.12.1"
+
+# Eanble a small amount of optmization in debug mode
+[profile.dev]
+opt-level = 1
+
+# Enable high optimizations for dependencies (incl. Bevy)
+[profile.dev.package."*"]
+opt-level = 3
